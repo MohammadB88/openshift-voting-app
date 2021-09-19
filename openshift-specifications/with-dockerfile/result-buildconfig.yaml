@@ -5,6 +5,11 @@ metadata:
   labels:
     app: voting-app
 spec:
+  triggers:
+    - type: "GitHub"
+      github:
+        secretReference:
+          name: "mysecret"
   strategy:
     type: Docker
   source:
